@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
+	{% load static %}
 <title>Aridity Weather Widget Flat Responsive Widget Template :: w3layouts</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +17,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //custom-theme -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <!-- //js --> 
-<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+<link rel="stylesheet" type="text/css" href="{% static 'css/easy-responsive-tabs.css' %}" />
 <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body onload="startTime()">
@@ -229,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- sky-icons -->
-		<script src="js/skycons.js"></script>
+		<script src="{% static 'js/skycons.js' %}"></script>
 		<script>
 		 var icons = new Skycons({"color": "#999999"}),
 			  list  = [
@@ -258,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 	<!-- //sky-icons -->
 	<!-- tabs -->
-		<script src="js/easyResponsiveTabs.js"></script>
+		<script src="{% static 'js/easyResponsiveTabs.js' %}"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				//Horizontal Tab
