@@ -30,10 +30,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="w3_agile_main_grids">
 			<div class="w3layouts_main_grid">
 				<div class="w3layouts_main_grid_left">
-					<h2>London, United Kingdom.</h2>
-					<p>Mostly Rainy</p>
+					<h2>{{data.city}}</h2>
+					<p>{{data.weather_discription}}</p>
 					<h3>Now</h3>
-					<h4>10<span>°c</span></h4>
+					<h4>{{data.temperature_celsius}}<span>°c</span></h4>
 				</div>
 				<div class="w3layouts_main_grid_right">
 					<canvas id="sleet" width="70" height="70"> </canvas>
@@ -65,8 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="wthree_main_grid_left_grid">
 						<div class="w3ls_main_grid_left_grid1">
 							<div class="w3l_main_grid_left_grid1_left">
-								<h3>Partly Sunny</h3>
-								<p>3 <span>%</span></p>
+								<h3>Visibility</h3>
+								<p>{{data.visibility}}<span>Km</span></p>
 							</div>
 							<div class="w3l_main_grid_left_grid1_right">
 								<canvas id="partly-cloudy-day" width="45" height="45"></canvas>
@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="w3ls_main_grid_left_grid1">
 							<div class="w3l_main_grid_left_grid1_left">
 								<h3>Cloud</h3>
-								<p>38 <span>%</span></p>
+								<p>{{data.cloud}}<span>%</span></p>
 							</div>
 							<div class="w3l_main_grid_left_grid1_right">
 								<canvas id="cloudy" width="45" height="45"></canvas>
@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="w3ls_main_grid_left_grid1">
 							<div class="w3l_main_grid_left_grid1_left">
 								<h3>Wind</h3>
-								<p>14 <span>Km/h</span></p>
+								<p>{{data.wind}}<span>Km/h</span></p>
 							</div>
 							<div class="w3l_main_grid_left_grid1_right">
 								<canvas id="wind" width="45" height="45"></canvas>
@@ -99,48 +99,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="agileinfo_main_grid_right_grid">
 						<div id="parentHorizontalTab">
 							<ul class="resp-tabs-list hor_1">
-								<li>Today</li>
+								<li>Temp</li>
 								<li>Week</li>
 								<li>Month</li>
 							</ul>
 							<div class="resp-tabs-container hor_1">
 								<div class="w3_agileits_tabs">
-									<div class="w3_main_grid_right_grid1">
+									<div class="w3_main_grid_right_grid1" style="padding-top: 8px;padding-bottom: 8px;">
 										<div class="w3_main_grid_right_grid1_left">
-											<p>10 AM</p>
+											<p>Current</p>
 										</div>
 										<div class="w3_main_grid_right_grid1_right">
-											<p>15<i>°c</i><span>Cloudy</span></p>
+											<p>{{data.temperature_celsius}}<i>°c</i></p>
 										</div>
 										<div class="clear"> </div>
 									</div>
-									<div class="w3_main_grid_right_grid1">
+									<div class="w3_main_grid_right_grid1" style="padding-top: 8px;padding-bottom: 8px;">
 										<div class="w3_main_grid_right_grid1_left">
-											<p>11 AM</p>
+											<p>Temp Max</p>
 										</div>
-										<div class="w3_main_grid_right_grid1_right">
-											<p>16<i>°c</i><span>Clear</span></p>
+										<div class="w3_main_grid_right_grid1_right" >
+											<p>{{data.temp_max_celsius}}<i>°c</i></p>
 										</div>
 										<div class="clear"> </div>
 									</div>
-									<div class="w3_main_grid_right_grid1">
+									<div class="w3_main_grid_right_grid1" style="padding-top: 8px;padding-bottom: 8px;">
 										<div class="w3_main_grid_right_grid1_left">
-											<p>12 PM</p>
+											<p>Temp Min</p>
 										</div>
 										<div class="w3_main_grid_right_grid1_right">
-											<p>18<i>°c</i><span>Cear</span></p>
+											<p>{{data.temp_min_celsius}}<i>°c</i></p>
 										</div>
 										<div class="clear"> </div>
 									</div>
-									<div class="w3_main_grid_right_grid1">
+									<div class="w3_main_grid_right_grid1" style="padding-top: 7px;padding-bottom: 7px;">
 										<div class="w3_main_grid_right_grid1_left">
-											<p>2 PM</p>
+											<p>Feels Like</p>
 										</div>
 										<div class="w3_main_grid_right_grid1_right">
-											<p>12<i>°c</i><span>Partly Cloudy</span></p>
+											<p>{{data.feel_temp}}<i>°c</i></p>
 										</div>
 										<div class="clear"> </div>
 									</div>
+									
 								</div>
 								<div class="w3_agileits_tabs">
 									<div class="w3_main_grid_right_grid1">
